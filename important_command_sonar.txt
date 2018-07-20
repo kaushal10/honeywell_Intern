@@ -1,0 +1,1 @@
+sonar-scanner.bat -Dsonar.projectKey=PSB -Dsonar.sources=. -Dsonar.host.url=https://sonarqube.honeywell.com -Dsonar.login=54e80dd173adb6ed992a7030407b024f5e9c3dac

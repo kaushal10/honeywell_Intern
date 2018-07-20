@@ -1,0 +1,1 @@
+Invoke-AzureRmVMRunCommand -ResourceGroupName 'iamdat-use-rg' -Name 'iamdat-imssvcswarm1' -CommandId 'RunShellScript' -ScriptPath 'Deploy.sh' -Parameter @{"arg1" = "username";"arg2" = "swarmip";"arg3" = "serviceName";"arg4" = "imageName";"arg5" = "buildNumber";"arg6" = "replicaCount"}

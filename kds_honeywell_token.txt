@@ -1,0 +1,10 @@
+840f71127f702a71e157e07742bc410e7ba73f28
+#model head phones :: c320m blackwire
+#MatrikonOPCUATunneller_Web.exe
+#opc.tcp://IE75WSAP:21381/MatrikonOpcUaWrapper
+
+Sentience Developer
+{
+	App ID : 3989701a-2e72-46bf-a927-93ec8761f9b8
+	AD Key : pi(Rk!@v].X(Qa+)rMom#J@gY}_xfNgQ]KVP9Wc}
+}

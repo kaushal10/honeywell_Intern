@@ -1,0 +1,26 @@
+serviceprinciple is central acc type to get access on azure vms .
+ask yogita for subsription for reader (linux machine)
+execute a simple command like ifconfig on a linux vm.
+imort azure vm for pwoershell on ur local machine and execute these commands.
+talk to sabari also about all this , he knows alot about octopus. 
+kbye
+
+
+create a process in octopus and try to run ur script from the portal itself. ask sabari how he had
+he had done this. 
+u dont have to run from powershell.
+yogita's script ko run karna hai portal me kuch kuch karke :P
+
+
+try to do some inline scripting on octopus only, see if ifconfig works , if yes then try
+the actual script there itself. 
+move to production after navia reviewing once. 
+
+ask sabari for deplotment process step and ask which deployment target. she said something
+like you have to use some existing tentacle(a windows server which can perform octopus tasks)
+ask yogita to demo a deployment process and show logs. This is where u will see the results
+of ur inline scripts.
+
+vm has a role. ask navya to create a role for you. process step attatches to a role. then
+in deployment target just pass the role. bamboo passes the package to octopus. scripts/{filename}.ps1
+will be the path to the script.

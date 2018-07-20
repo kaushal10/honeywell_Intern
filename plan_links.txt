@@ -1,0 +1,11 @@
+IMS - Bamboo Plan#Details:-
+Plan#Plan link
+ims-ansiblenew#https://build.chevalpartners.com/browse/SI-IMAN
+ims-openig#https://build.chevalpartners.com/browse/SI-IG
+ims-sentlogin#https://build.chevalpartners.com/browse/SI-SS
+ims-service#https://build.chevalpartners.com/browse/SI-IM
+Sentience IMS Login#https://build.chevalpartners.com/browse/SI-TEST
+ssoadm#https://build.chevalpartners.com/browse/SI-SSOAD
+ims-redis#https://build.chevalpartners.com/browse/SI-IR
+ims-sentlogintemplates1#https://build.chevalpartners.com/browse/SI-TPL
+ims-infra-stack#https://build.chevalpartners.com/browse/SI-SIMS

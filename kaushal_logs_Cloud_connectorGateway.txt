@@ -1,0 +1,13 @@
+2018-02-23T16:09:19.4079688+05:30 (15196 6) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:124:: KAUSHAL MHS POINT IDDD: MHS-3E
+2018-02-23T16:09:19.4079688+05:30 (15196 6) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:125:: KAUSHAL MHS QUALITY: Good
+2018-02-23T16:09:19.4235949+05:30 (15196 6) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:126:: KAUSHAL MHS TIME: 2/23/2018 4:09:19 PM
+2018-02-23T16:09:19.4235949+05:30 (15196 6) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:127:: KAUSHAL MHS VALUE: {"id":"3E","description":"Line 3E","idModule":"MOD3","idBuffer":"B3E","idStorage":"15LS","pickingPoint":"B3E","shift":2,"numberOfOperators":5,"lot":{"id":"2750000719302","idMaterial":"782313-0001"},"productionStateDescription":{"id":"04","description":"Maintenance Request"},"ResponseTime":"201802231609106424","Source":"8415"}
+
+
+
+
+2018-02-23T16:15:35.5016136+05:30 (15836 5) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:122:: Sending Mhs Data
+2018-02-23T16:15:35.5016136+05:30 (15836 5) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:124:: KAUSHAL MHS POINT IDDD: MHS-3E
+2018-02-23T16:15:35.5016136+05:30 (15836 5) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:125:: KAUSHAL MHS QUALITY: Good
+2018-02-23T16:15:35.5172397+05:30 (15836 5) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:126:: KAUSHAL MHS TIME: 2/23/2018 4:15:35 PM
+2018-02-23T16:15:35.5172397+05:30 (15836 5) Gateway:DataAcquisitionPlugin.cs:OnMessageReceived:127:: KAUSHAL MHS VALUE: {"id":"3E","description":"Line 3E","idModule":"MOD3","idBuffer":"B3E","idStorage":"15LS","pickingPoint":"B3E","shift":2,"numberOfOperators":5,"lot":{"id":"2750000719302","idMaterial":"782313-0001"},"productionStateDescription":{"id":"04","description":"Maintenance Request"},"ResponseTime":"201802231615106494","Source":"8415"}

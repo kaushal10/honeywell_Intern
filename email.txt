@@ -1,0 +1,67 @@
+Connect to CpsUIDb database 
+Connect to CpsMetricValue collection
+For each of the below tags from this collection
+FI_12471_01.PV_BVFCR
+S12471_01.STDLIQVOLFLOW_RC
+FI_12347_01.PV_BVFCR
+SN_12347_01_H2.PV_CR
+FI_12431_01.PV_BVFCR
+XI_12108B_01.PV_CR
+S12101_01.VLPR_N2A_T_CR
+XI_121343_01_TOTDT.PV_CR
+XI_121343_01_H2HC.PV_CR
+XI_121343_01_WAIT.PV_CR
+U0300_01_RX.DELTA_WAIT_RC
+XI_121348_01_CK.PV_CR
+U0312_01.CL_DELTA_DES
+FI_12347_01.PV_BVFCR
+FI_12140_01.PV_BVFCR
+E121201Q_01.TEMP_TWMAX_RC
+PI_121201Q_01_A.PV_CR
+PI_121202Q_01_A.PV_CR
+PI_121203Q_01_A.PV_CR
+XI_12140_01.PV_CR
+PI_12101_01.PV_CR
+                                
+For each day From 1-jan-2018 to 7-jan-2018 
+                                Query CpsMetricvalue collection for that day and tag
+Transform and create new json
+Insert into MetricValuesRaw collection
+                                Loop for next day 
+Loop for next tag
+
+
+Structure of a document in CpsMetricValue collection
+{
+    "_id" : "ai_121201_01_o2ex.pv_cr_1514839140",
+    "TagName" : "AI_121201_01_O2EX.PV_CR",
+    "TimeStamp2" : {
+        "$date" : 1514819340000
+    },
+    "TimeStamp" : 1514839140,
+    "Val" : 3.76577813696022,
+    "TenantId" : "KKRUAREA01NAP01"
+}
+
+
+Structure of a document in MetricValuesRaw collection
+{
+    "_id" : ObjectId("5aa661857dfa951278198f40"),
+    "tagName" : "FI_12471_01.PV_BVFCR",
+    "startDt" : "1514764800",
+    "tenantId" : "KKRUAREA01NAP01",
+    "timeSeries" : [
+        {
+            "timeStamp" : 1514764800,
+            "Val" : 22778.6362088934
+        },
+        {
+            "timeStamp" : 1514764860,
+            "Val" : 23083.7656723708
+        },
+        {
+            "timeStamp" : 1514764920,
+            "Val" : 22912.4985835088
+        }
+    ]
+}

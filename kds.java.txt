@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sentience Visualization Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Sentience Visualization Demo</h1>
+        <h4>by <a href="https://sentience.honeywell.com/professional-services">Professional Services</a> team</h4>
+        <h4>&nbsp;</h4>
+        <p>
+            This demo shows how data sent to Sentience can be retrieved and visualized.
+            Source code of this demo is hosted <a href="https://bitbucket.honeywell.com/projects/PSB/repos/sentience-visualization-demo/browse">here</a>.
+            It is written in Java language using <a href="https://bitbucket.honeywell.com/projects/PSB/repos/sentience-iot-client-java/browse" >high level Sentience IoT Java Client Library</a>.
+        </p>
+        <p>
+            By default this demo shows the heartbeat information and data point history sent from a demo gateway.
+            Behavior of the demo gateway can be controlled from the
+            <a target="blank" href="http://10.8.67.104/sentience-gateway-demo-java/">home page of the demo gateway</a>.
+        </p>
+        <p>
+            List of a few sample/demo systems can be found <a href="https://confluence.honeywell.com/display/~H215918/Sentience+Visualization+Demo">here</a>.
+            You can also set your own IDs, keys, and URLs to see information about your own system.
+        </p>
+    </div>
+    <div class="container-fluid">
+        <form id="default-form" method="post" th:action="@{/system}">
+            
+            <p></p>
+            <button id="view-points" type="submit" class="btn btn-primary">View system heartbeats and data points</button>
+            <p></p>
+
+            <div class="form-group">
+                <label for="systemGuid">systemGuid</label>
+                <input class="form-control" id="systemGuid" name="systemGuid" th:value="${f.systemGuid}"></input>
+            </div>
+            <div class="form-group">
+                <label for="appClientId">appClientId</label>
+                <input class="form-control" id="appClientId" name="appClientId" th:value="${f.appClientId}"></input>
+            </div>
+            <div class="form-group">
+                <label for="appClientSecret">appClientSecret</label>
+                <input class="form-control" id="appClientSecret" name="appClientSecret" value=""></input>
+            </div>
+            <div class="form-group">
+                <label for="authTokenEndpoint">authTokenEndpoint</label>
+                <input class="form-control" id="authTokenEndpoint" name="authTokenEndpoint" th:value="${f.authTokenEndpoint}"></input>
+            </div>
+            <div class="form-group">
+                <label for="globalApiEndpoint">globalApiEndpoint</label>
+                <input class="form-control" id="globalApiEndpoint" name="globalApiEndpoint" th:value="${f.globalApiEndpoint}"></input>
+            </div>
+            <div class="form-group">
+                <label for="globalApiResourceId">globalApiResourceId</label>
+                <input class="form-control" id="globalApiResourceId" name="globalApiResourceId" th:value="${f.globalApiResourceId}"></input>
+            </div>
+        </form>
+    </div>
+
+<script type="text/javascript" th:inline="javascript">
+/*<![CDATA[*/
+
+contextPath = [[@{/}]];
+$('#view-points').on('click', function(e){
+    e.preventDefault();
+    $(this).prop('disabled', true);
+    $('#default-form').prop('action', contextPath + "system").submit();
+});
+
+/*]]>*/
+</script>
+</body>
+</html>

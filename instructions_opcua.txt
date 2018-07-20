@@ -1,0 +1,242 @@
+### Requirements
+- VS 2017
+- C++ 11
+- Matrikon SDK
+- nuget C++ package manager
+### Building the project
+
+```
+init.bat
+```
+
+### Functionality
+
+- Supports both file based and rest api to configure opcua client.
+- Getting an opcua server connection details
+- Browsing a opcua server and getting all the nodes.
+- Subscribe to a list of nodes and values respond to a ZmQ topic.
+- Failure and Recovery for subscription if issues occur within opcua client and server.
+- Supports multiple subscriptions.
+- Extendable logger, supports both file and console based logging.
+
+### ZmQ
+
+- ZmQ implementation is used to publish subscription messages.
+- Publish port is configured in edge_constants.h and is set to the default value of: 5563
+- Zmq publish topic is configured in edge_constants.h and is set TagSubscriptionResp
+
+
+#### File based configuration
+
+- Requires an file named tagconfig.json in the root of the exe file.
+- This is used to subscribe to a list of nodes.
+
+    * File Format
+```json
+    {
+      "ServerAddress": "",
+      "ConnectionName": "conn1",
+      "Configuration": {
+        "SecurityMode": 1,
+        "Transport": "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary",
+        "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#None"
+      },
+      "SecurityConfiguration": null,
+      "Parameters": {
+        "RequestedPublishingInterval": "1000",
+        "RequestedLifetimeCount": "40",
+        "RequestedMaxKeepAliveCount": "10",
+        "MaxNotificationsPerPublish": "0",
+        "PublishingEnabled": "1",
+        "Priority": "0"
+      },
+      "NodeList": [
+        {
+          "NodeId": "ns=2;s=0:8415.MD03.FA 3A.OP10.DATA EXCHANGE.PLC.DATA.FaultCode1"
+        }
+      ]
+    }
+```
+### Rest Api based Configuration
+    - HTTP server is hosted on port: 34568
+    - Connect is used to get the server configuration such as what transports, policies and security modes are supported.
+    - Browse is used to get the recursive node structure of the opcua server.
+    - Subscribe is used to get real-time updates to tags on the opcua server.
+   * Connect Request
+   
+   ```
+   POST /opcua/api/connect/ HTTP/1.1
+   Host: localhost:34568
+   Content-Type: application/json
+   Cache-Control: no-cache
+   Postman-Token: ac80a845-69dd-539a-cef2-9c817a6172e9
+   
+   {
+   	
+   	"ServerAddress": "opc.tcp://ga69ltfcbnxf2:62547/Quickstarts/DataAccessServer"
+   }
+   ```
+   * Connect Response
+```json   
+   {
+       "ServerAddress": "opc.tcp://localhost:62547/Quickstarts/DataAccessServer",
+       "Configuration": [
+           {
+               "SecurityMode": 3,
+               "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15",
+               "Transport": "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary"
+           },
+           {
+               "SecurityMode": 2,
+               "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#Basic256",
+               "Transport": "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary"
+           },
+           {
+               "SecurityMode": 1,
+               "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#None",
+               "Transport": "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary"
+           },
+           {
+               "SecurityMode": 3,
+               "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15",
+               "Transport": "http://opcfoundation.org/UA-Profile/Transport/soaphttp-wssc-uaxml-uabinary"
+           },
+           {
+               "SecurityMode": 2,
+               "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#Basic256",
+               "Transport": "http://opcfoundation.org/UA-Profile/Transport/soaphttp-wssc-uaxml-uabinary"
+           },
+           {
+               "SecurityMode": 1,
+               "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#None",
+               "Transport": "http://opcfoundation.org/UA-Profile/Transport/soaphttp-wssc-uaxml-uabinary"
+           }
+       ]
+   }
+```
+
+   * Browse Request
+   
+   ```
+    POST /opcua/api/browse/ HTTP/1.1
+    Host: localhost:34568
+    Content-Type: application/json
+    Cache-Control: no-cache
+    Postman-Token: c27588fb-7316-592a-e970-183afcfe2c2d
+    
+    {
+        "ServerAddress": "opc.tcp://ga69ltfcbnxf2:62547/Quickstarts/DataAccessServer",
+        "ConnectionName": "conn2",
+        "Configuration": 
+            {
+                "SecurityMode": 1,
+                "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#None",
+                "Transport": "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary"
+            }
+        
+    }
+   ```
+   * Browse Response
+```json   
+  {
+      "BrowseName": "Objects",
+      "BrowsePath": "Root/",
+      "NodeId": "ns=0;i=85",
+      "ReferenceTypeId": "ns=0;i=35",
+      "TypeDefinition": "svr=0;ns=0;i=61",
+      "NodeCollections": [
+          {
+              "BrowseName": "Server",
+              "BrowsePath": "Root/Objects/",
+              "NodeId": "ns=0;i=2253",
+              "ReferenceTypeId": "ns=0;i=35",
+              "TypeDefinition": "svr=0;ns=0;i=2004",
+              "NodeCollections": [
+               ]
+          }
+  }               
+```
+
+   * Subscription GET Request
+      ```
+GET /opcua/api/subscribe/ HTTP/1.1
+Host: localhost:34568
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: f9057602-44a6-2828-1a01-bcb8a1c26534
+
+   ```
+   * Response
+```json   
+[
+    {
+        "SubscriptionId": 1,
+        "Nodes": [
+            {
+                "NodeId": "Pipe1002?Measurement"
+            },
+            {
+                "NodeId": "Pipe1001?Measurement"
+            }
+        ]
+    }
+]           
+```
+   * Subscription Create Request
+
+   ```
+    POST /opcua/api/subscribe/ HTTP/1.1
+    Host: localhost:34568
+    Content-Type: application/json
+    Cache-Control: no-cache
+    Postman-Token: 44e745cd-23da-cc8f-28cc-26187080529d
+    
+    {
+      "ServerAddress": "opc.tcp://ga69ltfcbnxf2:62547/Quickstarts/DataAccessServer",
+      "ConnectionName": "conn27",
+      "Configuration": {
+        "SecurityMode": 1,
+        "Transport": "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary",
+        "PolicyName": "http://opcfoundation.org/UA/SecurityPolicy#None"
+      },
+      "SecurityConfiguration": null,
+      "Parameters": {
+        "RequestedPublishingInterval": "1000",
+        "RequestedLifetimeCount": "40",
+        "RequestedMaxKeepAliveCount": "10",
+        "MaxNotificationsPerPublish": "0",
+        "PublishingEnabled": "1",
+        "Priority": "0"
+      },
+      "NodeList": [
+        {
+          "NodeId": "ns=2;s=1:Pipe1002?Measurement",
+          "Mapping": null
+        }
+      ]
+    }
+   ```
+   *  Response
+```json   
+  {
+  }             
+```
+
+   * Subscription Delete Request
+
+   ```
+DELETE /opcua/api/subscribe/ HTTP/1.1
+Host: localhost:34568
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 0002cd88-2418-7fdf-9f42-c366ad620dce
+
+{
+	"SubscriptionId": 1
+}
+   ```
+   *  Response
+```json   
+  {
+  }             
+```

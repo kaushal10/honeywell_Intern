@@ -1,0 +1,79 @@
+{"PhysicalId":"113180540539","CycleDate":"2018-02-23T16:47:20+05:30","AgentCode":"2BVSR","MachineType":"VSR","PartNumber":"825975-1113","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201802231720106357","Source":"8415"} PointId is :PHX-VBC00179
+ Quality is : Good 
+ Time is : 2/23/2018 5:23:16 PM 
+ Value is : {"PhysicalId":"VBC00179","CycleDate":"2018-02-23T16:50:12+05:30","AgentCode":"1DFA","MachineType":"FINAL","PartNumber":"821383-0001","ProductionReport":"1","TraceabilityType":"Cycle Data","ResponseTime":"201802231723106359","Source":"8415"} PointId is :PHX-113180540537
+ Quality is : Good 
+ Time is : 2/23/2018 5:26:13 PM 
+ Value is : {"PhysicalId":"113180540537","CycleDate":"2018-02-23T16:53:12+05:30","AgentCode":"2BVSR","MachineType":"VSR","PartNumber":"825975-1113","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201802231726106358","Source":"8415"} PointId is :PHX-542280541031
+ Quality is : Good 
+ Time is : 2/23/2018 5:32:14 PM 
+ Value is : {"PhysicalId":"542280541031","CycleDate":"2018-02-23T16:59:11+05:30","AgentCode":"3BVSR","MachineType":"VSR","PartNumber":"800854-1002","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201802231732106358","Source":"8415"} PointId is :PHX-583580543501
+ Quality is : Good 
+ Time is : 2/23/2018 6:30:30 PM 
+ Value is : {"PhysicalId":"583580543501","CycleDate":"2018-02-23T17:57:25+05:30","AgentCode":"1AVSR","MachineType":"VSR","PartNumber":"784958-0003","ProductionReport":"0","TraceabilityType":"Cycle Data","ResponseTime":"201802231830245131","Source":"8415"} PointId is :PHX-542280541167
+ Quality is : Good 
+ Time is : 2/23/2018 6:33:27 PM 
+ Value is : {"PhysicalId":"542280541167","CycleDate":"2018-02-23T18:00:27+05:30","AgentCode":"3BVSR","MachineType":"VSR","PartNumber":"800854-1002","ProductionReport":"0","TraceabilityType":"Cycle Data","ResponseTime":"201802231833245129","Source":"8415"} PointId is :PHX-441180460282
+ Quality is : Good 
+ Time is : 2/23/2018 6:37:25 PM 
+ Value is : {"PhysicalId":"441180460282","CycleDate":"2018-02-23T18:03:30+05:30","AgentCode":"1DVSR","MachineType":"VSR","PartNumber":"433289-0441","ProductionReport":"0","TraceabilityType":"Cycle Data","ResponseTime":"201802231836245129","Source":"8415"} PointId is :PHX-VBL00874
+ Quality is : Good 
+ Time is : 2/23/2018 6:41:07 PM 
+ Value is : {"PhysicalId":"VBL00874","CycleDate":"2018-02-23T18:06:25+05:30","AgentCode":"2AFA","MachineType":"FINAL","PartNumber":"786880-0019","ProductionReport":"1","TraceabilityType":"Cycle Data","ResponseTime":"201802231839245134","Source":"8415"} PointId is :PHX-732180360674
+ Quality is : Good 
+ Time is : 3/2/2018 4:22:02 PM 
+ Value is : {"PhysicalId":"732180360674","CycleDate":"2018-03-02T15:49:08+05:30","AgentCode":"1AVSR","MachineType":"VSR","PartNumber":"779967-0032","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021621599148","Source":"8415"} PointId is :PHX-432580619535
+ Quality is : Good 
+ Time is : 3/2/2018 4:25:02 PM 
+ Value is : {"PhysicalId":"432580619535","CycleDate":"2018-03-02T15:52:17+05:30","AgentCode":"1CVSR","MachineType":"VSR","PartNumber":"825474-0032","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021624599158","Source":"8415"} PointId is :PHX-VCP00716
+ Quality is : Good 
+ Time is : 3/2/2018 4:28:02 PM 
+ Value is : {"PhysicalId":"VCP00716","CycleDate":"2018-03-02T15:55:05+05:30","AgentCode":"2BFA","MachineType":"FINAL","PartNumber":"822182-0011","ProductionReport":"1","TraceabilityType":"Cycle Data","ResponseTime":"201803021627599208","Source":"8415"} PointId is :PHX-BADCHRA
+ Quality is : Good 
+ Time is : 3/2/2018 4:31:03 PM 
+ Value is : {"PhysicalId":"BADCHRA","CycleDate":"2018-03-02T15:58:02+05:30","AgentCode":"2CVSR","MachineType":"VSR","PartNumber":"741661-0474","ProductionReport":"9238","TraceabilityType":"Cycle Data","ResponseTime":"201803021630599132","Source":"8415"} PointId is :PHX-VCS00201
+ Quality is : Good 
+ Time is : 3/2/2018 4:34:02 PM 
+ Value is : {"PhysicalId":"VCS00201","CycleDate":"2018-03-02T16:01:16+05:30","AgentCode":"1CFA","MachineType":"FINAL","PartNumber":"841384-0001","ProductionReport":"1","TraceabilityType":"Cycle Data","ResponseTime":"201803021633599068","Source":"8415"} PointId is :PHX-228180610293
+ Quality is : Good 
+ Time is : 3/2/2018 4:37:02 PM 
+ Value is : {"PhysicalId":"228180610293","CycleDate":"2018-03-02T16:04:00+05:30","AgentCode":"1DVSR","MachineType":"VSR","PartNumber":"754852-0228","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021636599067","Source":"8415"} PointId is :PHX-VCQ00505
+ Quality is : Good 
+ Time is : 3/2/2018 4:40:02 PM 
+ Value is : {"PhysicalId":"VCQ00505","CycleDate":"2018-03-02T16:07:04+05:30","AgentCode":"2CFA","MachineType":"FINAL","PartNumber":"787556-0022","ProductionReport":"1","TraceabilityType":"Cycle Data","ResponseTime":"201803021639599313","Source":"8415"} PointId is :PHX-542280610838
+ Quality is : Good 
+ Time is : 3/2/2018 4:43:02 PM 
+ Value is : {"PhysicalId":"542280610838","CycleDate":"2018-03-02T16:10:20+05:30","AgentCode":"3BVSR","MachineType":"VSR","PartNumber":"800854-1002","ProductionReport":"0","TraceabilityType":"Cycle Data","ResponseTime":"201803021642599085","Source":"8415"} PointId is :PHX-280580619478
+ Quality is : Good 
+ Time is : 3/2/2018 4:46:02 PM 
+ Value is : {"PhysicalId":"280580619478","CycleDate":"2018-03-02T16:13:01+05:30","AgentCode":"3CVSR","MachineType":"VSR","PartNumber":"816428-0010","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021645599078","Source":"8415"} PointId is :PHX-120380610324
+ Quality is : Good 
+ Time is : 3/2/2018 4:49:02 PM 
+ Value is : {"PhysicalId":"120380610324","CycleDate":"2018-03-02T16:16:20+05:30","AgentCode":"2DVSR","MachineType":"VSR","PartNumber":"801855-0086","ProductionReport":null,"TraceabilityType":"Curves","ResponseTime":"201803021648599093","Source":"8415"} PointId is :PHX-432580619542
+ Quality is : Good 
+ Time is : 3/2/2018 4:52:04 PM 
+ Value is : {"PhysicalId":"432580619542","CycleDate":"2018-03-02T16:19:00+05:30","AgentCode":"1CVSR","MachineType":"VSR","PartNumber":"825474-0032","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021651599074","Source":"8415"} PointId is :PHX-542280610818
+ Quality is : Good 
+ Time is : 3/2/2018 4:55:03 PM 
+ Value is : {"PhysicalId":"542280610818","CycleDate":"2018-03-02T16:22:09+05:30","AgentCode":"3BVSR","MachineType":"VSR","PartNumber":"800854-1002","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021654599089","Source":"8415"} PointId is :PHX-542280610818
+ Quality is : Good 
+ Time is : 3/2/2018 4:58:05 PM 
+ Value is : {"PhysicalId":"542280610818","CycleDate":"2018-03-02T16:24:59+05:30","AgentCode":"3BVSR","MachineType":"VSR","PartNumber":"800854-1002","ProductionReport":"0","TraceabilityType":"Cycle Data","ResponseTime":"201803021657599070","Source":"8415"} PointId is :PHX-542280610819
+ Quality is : Good 
+ Time is : 3/2/2018 5:01:02 PM 
+ Value is : {"PhysicalId":"542280610819","CycleDate":"2018-03-02T16:28:02+05:30","AgentCode":"3BVSR","MachineType":"VSR","PartNumber":"800854-1002","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021700599109","Source":"8415"} PointId is :PHX-VCH00787
+ Quality is : Good 
+ Time is : 3/2/2018 5:04:02 PM 
+ Value is : {"PhysicalId":"VCH00787","CycleDate":"2018-03-02T16:31:17+05:30","AgentCode":"3CFA","MachineType":"FINAL","PartNumber":"821042-0013","ProductionReport":"1","TraceabilityType":"Cycle Data","ResponseTime":"201803021703599199","Source":"8415"} PointId is :PHX-228180610296
+ Quality is : Good 
+ Time is : 3/2/2018 5:07:07 PM 
+ Value is : {"PhysicalId":"228180610296","CycleDate":"2018-03-02T16:34:13+05:30","AgentCode":"1DVSR","MachineType":"VSR","PartNumber":"754852-0228","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021706599172","Source":"8415"} PointId is :PHX-261180610241
+ Quality is : Good 
+ Time is : 3/2/2018 5:10:05 PM 
+ Value is : {"PhysicalId":"261180610241","CycleDate":"2018-03-02T16:37:03+05:30","AgentCode":"1BVSR","MachineType":"VSR","PartNumber":"754852-0261","ProductionReport":"108","TraceabilityType":"Cycle Data","ResponseTime":"201803021709599113","Source":"8415"} PointId is :PHX-261180610240
+ Quality is : Good 
+ Time is : 3/2/2018 5:13:04 PM 
+ Value is : {"PhysicalId":"261180610240","CycleDate":"2018-03-02T16:40:02+05:30","AgentCode":"1BVSR","MachineType":"VSR","PartNumber":"754852-0261","ProductionReport":"0","TraceabilityType":"Cycle Data","ResponseTime":"201803021712599186","Source":"8415"} PointId is :PHX-BADCHRA
+ Quality is : Good 
+ Time is : 3/2/2018 5:16:03 PM 
+ Value is : {"PhysicalId":"BADCHRA","CycleDate":"2018-03-02T16:43:02+05:30","AgentCode":"1DVSR","MachineType":"VSR","PartNumber":"754852-0228","ProductionReport":"123","TraceabilityType":"Cycle Data","ResponseTime":"201803021715599068","Source":"8415"}
